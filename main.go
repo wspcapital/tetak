@@ -1,6 +1,7 @@
 	package main
 
 	import "fmt"
+	import "flag"
 
 	func fact(f int, n int) int {
 		if n==f+1 {
@@ -23,5 +24,12 @@
 	}
 
 	func main(){
-		fact(200,1)
+		fromPtr := flag.Int("from", 1, "an int")
+		toPtr := flag.Int("to", 200, "an int")
+
+		flag.Parse()
+                if *toPtr <= *fromPtr{
+			panic(fmt.Sprintf("Wrong params From=%v To=%v", *fromPtr, *toPtr))
+		}
+		fact(*toPtr,*fromPtr)
 	}

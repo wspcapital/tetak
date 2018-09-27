@@ -9,11 +9,11 @@
 		
 		ping := n%3
 		pong := n%4
-		if ping > 0 && pong > 0{
+		if ping == 0 && pong == 0{
 			fmt.Println("PingPong:",n)
-		} else if ping > 0{
+		} else if ping == 0{
 			fmt.Println("Ping:",n)	
-		} else if pong > 0{
+		} else if pong == 0{
 			fmt.Println("Pong:",n) 
 		}
 		

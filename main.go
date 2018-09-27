@@ -15,6 +15,8 @@
 			fmt.Println("Ping:",n)	
 		} else if pong == 0{
 			fmt.Println("Pong:",n) 
+		} else{
+			fmt.Println(":",n)
 		}
 		
 		return fact(f,n+1)
